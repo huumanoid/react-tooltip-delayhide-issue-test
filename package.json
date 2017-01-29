@@ -1,0 +1,25 @@
+{
+  "name": "react-tooltip-delayhide-issue-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.22.0",
+    "http-server": "^0.9.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-tooltip": "^3.2.2",
+    "webpack": "^1.14.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "webpack",
+    "run": "http-server dist -p 8090 -s",
+    "dev": "npm run build && npm run run"
+  },
+  "author": "",
+  "license": "ISC"
+}
