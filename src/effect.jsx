@@ -4,7 +4,7 @@ import ReactTooltip from "react-tooltip";
 
 ReactDOM.render(
     <div>
-        <ReactTooltip delayHide={1000} />
+        <ReactTooltip />
         <button
             style={{ display: "block", marginBottom: "20px" }}
             onClick={() => ReactTooltip.rebuild()}>
