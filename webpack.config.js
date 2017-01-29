@@ -3,7 +3,10 @@
 const path = require('path');
 
 module.exports = {
-    entry: './src/app.jsx',
+    entry: {
+        "delay-hide": "./src/delay-hide.jsx",
+        effect: "./src/effect.jsx",
+    },
     module: {
         loaders: [
             {
@@ -17,7 +20,7 @@ module.exports = {
         ],
     },
     output: {
-        filename: 'bundle.js',
+        filename: '[name].js',
         path: path.resolve(__dirname, 'dist'),
     },
 }
