@@ -10,3 +10,6 @@ npm run dev
 
 Web server runs at http://127.0.0.1:8091
 *NOTE: port is 8091 instead of 8090*
+
+delayHide demo is at / (or /index.html)
+effect demo is at /effect.html
