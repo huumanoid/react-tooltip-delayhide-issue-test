@@ -4,6 +4,7 @@ import ReactTooltip from "react-tooltip";
 
 ReactDOM.render(
     <div>
+        <h1>Fixed</h1>
         <ReactTooltip delayHide={1000} effect="solid" />
         <button
             style={{ display: "block", marginBottom: "20px" }}

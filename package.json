@@ -11,13 +11,13 @@
     "http-server": "^0.9.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "react-tooltip": "^3.2.2",
+    "react-tooltip": "github:huumanoid/react-tooltip#fix-hidden-dist",
     "webpack": "^1.14.0"
   },
   "devDependencies": {},
   "scripts": {
     "build": "webpack",
-    "run": "http-server dist -p 8090 -s",
+    "run": "http-server dist -p 8091 -s",
     "dev": "npm run build && npm run run"
   },
   "author": "",
