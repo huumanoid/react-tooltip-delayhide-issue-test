@@ -6,6 +6,8 @@ module.exports = {
     entry: {
         "delay-hide": "./src/delay-hide.jsx",
         effect: "./src/effect.jsx",
+        position: './src/position.jsx',
+        'dom-remove': './src/dom-remove.jsx',
     },
     module: {
         loaders: [
