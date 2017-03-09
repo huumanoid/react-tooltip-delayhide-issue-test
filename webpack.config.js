@@ -2,13 +2,14 @@
 
 const path = require('path');
 
+const entries = ['delay-hide', 'effect', 'position', 'dom-remove', 'event-type']
+const entry = {}
+for (const e of entries) {
+  entry[e] = './src/' + e + '.jsx'
+}
+
 module.exports = {
-    entry: {
-        "delay-hide": "./src/delay-hide.jsx",
-        effect: "./src/effect.jsx",
-        position: './src/position.jsx',
-        'dom-remove': './src/dom-remove.jsx',
-    },
+    entry,
     module: {
         loaders: [
             {
