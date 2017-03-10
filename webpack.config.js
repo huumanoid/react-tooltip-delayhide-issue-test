@@ -2,7 +2,7 @@
 
 const path = require('path');
 
-const entries = ['delay-hide', 'effect', 'position', 'dom-remove', 'event-type', 'original-position']
+const entries = ['delay-hide', 'effect', 'position', 'dom-remove', 'event-type', 'original-position', 'buttons']
 const entry = {}
 for (const e of entries) {
   entry[e] = './src/' + e + '.jsx'
