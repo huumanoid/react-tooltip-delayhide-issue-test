@@ -5,7 +5,6 @@ const path = require('path');
 const entries = [
   'delay-hide',
   'effect',
-  'position',
   'dom-remove',
   'event-type',
   'original-position',
