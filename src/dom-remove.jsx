@@ -11,9 +11,10 @@ const component = (props) =>
             onClick={() => ReactTooltip.rebuild()}>
             Rebuild
         </button>
+        <button style={{ display: "block" }} data-tip="two">This button will NOT be removed</button>
         {
           !props.remove &&
-            <button id="btnToRemove" style={{ display: "block" }} data-tip="one">SampleText1</button>
+            <button style={{ display: "block" }} data-tip="one">This button will be removed</button>
         }
     </div>
 
