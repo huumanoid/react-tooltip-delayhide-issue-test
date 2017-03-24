@@ -12,7 +12,8 @@ const entries = [
   'click-buttons',
   'nested',
   'tip-remove',
-  'disabled-input'
+  'disabled-input',
+  'click-on-off'
 ]
 const entry = {}
 for (const e of entries) {
