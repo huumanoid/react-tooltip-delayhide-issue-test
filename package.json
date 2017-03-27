@@ -17,7 +17,7 @@
   "devDependencies": {},
   "scripts": {
     "build": "webpack",
-    "run": "http-server dist -p 8090 -s",
+    "run": "http-server dist -p 8090 -s -c-1",
     "dev": "npm run build && npm run run"
   },
   "author": "",
