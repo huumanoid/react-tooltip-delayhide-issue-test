@@ -22,7 +22,7 @@ const component = (props) =>
         <button
             style={{ display: "block", marginBottom: "40px" }}
             onClick={toggleMount}>
-            Unmount
+            {props.unmount ? "Mount" : "Unmount"}
         </button>
         <button style={{ display: "block" }} data-tip="two">This button will NOT be removed</button>
         {
