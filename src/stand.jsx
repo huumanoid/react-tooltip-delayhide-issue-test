@@ -26,19 +26,27 @@ export class ReactTooltipStand extends Component {
   }
 
   renderTools() {
-    return <div>
+    let tools = [
       <button
       style={{ display: "block"}}
       onClick={() => ReactTooltip.rebuild()}
       >
         Rebuild
-      </button>
+      </button>,
       <button
         style={{ display: "block" }}
         onClick={this.toggleMount.bind(this)}
       >
         {this.state.mount ? "Unmount" : "Mount"}
       </button>
+    ]
+
+    if (this.props.tools) {
+      tools = tools.concat(this.props.tools)
+    }
+
+    return <div>
+      {tools}
     </div>
   }
 
