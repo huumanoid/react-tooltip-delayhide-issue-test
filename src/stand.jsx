@@ -45,6 +45,8 @@ export class ReactTooltipStand extends Component {
       tools = tools.concat(this.props.tools)
     }
 
+    tools = tools.map((tool, idx) => <div key={idx}>{tool}</div>)
+
     return <div>
       {tools}
     </div>
