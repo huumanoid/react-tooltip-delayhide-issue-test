@@ -1,6 +1,5 @@
 import React, {createElement, Component} from "react";
 import ReactDOM from "react-dom";
-import ReactTooltip from "react-tooltip";
 
 import {ReactTooltipStand} from "./stand.jsx"
 
@@ -8,7 +7,9 @@ class TipRemove extends Component {
   constructor(...args) {
     super(...args)
     this.state = {
-      tip: true,
+      tip: this.props.tip != null
+        ? this.props.tip
+        : true,
     }
   }
   render() {
@@ -17,7 +18,11 @@ class TipRemove extends Component {
         <p>hello, world!</p>
       }
       tools={[
-        <button onClick={() => this.setState({ tip: false })}>Remove data-tip</button>
+        <button
+          onClick={() => this.setState({ tip: !this.state.tip })}
+        >
+          {this.state.tip ? 'Remove data-tip' : 'Add data-tip'}
+        </button>
       ]}
     >
       {
