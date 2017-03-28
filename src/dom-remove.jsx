@@ -1,29 +1,38 @@
-import React, {createElement} from "react";
+import React, {createElement, Component} from "react";
 import ReactDOM from "react-dom";
-import ReactTooltip from "react-tooltip";
 
 import {ReactTooltipStand} from "./stand.jsx"
 
-let remove = false
-
-const component = (props) =>
-  <ReactTooltipStand
-    header={'"SampleText1" button will be removed in 5 seconds'}
-    reactTooltipProps={{ effect: "solid" }}
-  >
-    <button style={{ display: "block" }} data-tip="two">This button will NOT be removed</button>
-    {
-      !props.remove &&
-        <button style={{ display: "block" }} data-tip="one">This button will be removed</button>
+class RemoveFromDom extends Component {
+  constructor(...args) {
+    super(...args)
+    this.state = {
+      remove: false,
     }
-  </ReactTooltipStand>
+  }
 
-const render = () =>
-  ReactDOM.render(createElement(component, {remove}), document.getElementById('root'));
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        remove: true,
+      })
+    }, this.props.timeout || 5000)
+  }
 
-render(false)
+  render() {
+    const {remove} = this.state
 
-setTimeout(() => {
-  remove = true
-  render()
-}, 5000)
+    return <ReactTooltipStand
+      header={'"SampleText1" button will be removed in 5 seconds'}
+      reactTooltipProps={{ effect: "solid" }}
+    >
+      <button style={{ display: "block" }} data-tip="two">This button will NOT be removed</button>
+      {
+        !remove &&
+          <button style={{ display: "block" }} data-tip="one">This button will be removed</button>
+      }
+    </ReactTooltipStand>
+  }
+}
+
+ReactDOM.render(createElement(RemoveFromDom), document.getElementById('root'));
